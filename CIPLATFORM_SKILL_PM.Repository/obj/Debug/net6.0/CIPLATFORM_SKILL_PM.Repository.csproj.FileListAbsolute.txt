@@ -1,0 +1,17 @@
+D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Repository\bin\Debug\net6.0\CIPLATFORM_SKILL_PM.Repository.deps.json
+D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Repository\bin\Debug\net6.0\CIPLATFORM_SKILL_PM.Repository.runtimeconfig.json
+D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Repository\bin\Debug\net6.0\CIPLATFORM_SKILL_PM.Repository.dll
+D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Repository\bin\Debug\net6.0\ref\CIPLATFORM_SKILL_PM.Repository.dll
+D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Repository\bin\Debug\net6.0\CIPLATFORM_SKILL_PM.Repository.pdb
+D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Repository\obj\Debug\net6.0\CIPLATFORM_SKILL_PM.Repository.csproj.AssemblyReference.cache
+D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Repository\obj\Debug\net6.0\CIPLATFORM_SKILL_PM.Repository.GeneratedMSBuildEditorConfig.editorconfig
+D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Repository\obj\Debug\net6.0\CIPLATFORM_SKILL_PM.Repository.AssemblyInfoInputs.cache
+D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Repository\obj\Debug\net6.0\CIPLATFORM_SKILL_PM.Repository.AssemblyInfo.cs
+D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Repository\obj\Debug\net6.0\CIPLATFORM_SKILL_PM.Repository.csproj.CoreCompileInputs.cache
+D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Repository\obj\Debug\net6.0\CIPLATFORM_SKILL_PM.Repository.dll
+D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Repository\obj\Debug\net6.0\ref\CIPLATFORM_SKILL_PM.Repository.dll
+D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Repository\obj\Debug\net6.0\CIPLATFORM_SKILL_PM.Repository.pdb
+D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Repository\obj\Debug\net6.0\CIPLATFORM_SKILL_PM.Repository.genruntimeconfig.cache
+D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Repository\bin\Debug\net6.0\CIPLATFORM_SKILL_PM.Models.dll
+D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Repository\bin\Debug\net6.0\CIPLATFORM_SKILL_PM.Models.pdb
+D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Repository\obj\Debug\net6.0\CIPLATFORM_SKILL_PM.Repository.csproj.CopyComplete

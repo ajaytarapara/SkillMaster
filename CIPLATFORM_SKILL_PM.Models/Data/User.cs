@@ -1,0 +1,16 @@
+﻿using CIPLATFORM_SKILL_PM.Models.ViewModel;
+using System;
+using System.Collections.Generic;
+
+namespace CIPLATFORM_SKILL_PM.Models.Data
+{
+    public partial class User: BaseEntity
+    {
+        public int UserId { get; set; }
+        public string? FirstName { get; set; }
+        public string? LastName { get; set; }
+        public string? Email { get; set; }
+        public string? Password { get; set; }
+        public string? Role { get; set; }
+    }
+}
