@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "6ded1f87-02a5-4186-b5e0-6ad8fcdde2a4": {
+      "ProjectGuid": "6ded1f87-02a5-4186-b5e0-6ad8fcdde2a4",
+      "DisplayName": "CIPLATFORM_SKILL_PM.Models",
+      "ColorIndex": 0
+    },
+    "62274ed6-edac-4d9b-8224-865ddf9eb820": {
+      "ProjectGuid": "62274ed6-edac-4d9b-8224-865ddf9eb820",
+      "DisplayName": "CIPLATFORM_SKILL_PM.Repository",
+      "ColorIndex": 1
+    },
+    "2d06cb2e-e4b1-4e06-bdb8-ac949247f06f": {
+      "ProjectGuid": "2d06cb2e-e4b1-4e06-bdb8-ac949247f06f",
+      "DisplayName": "CIPLATFORM_SKILL_PM.Services",
+      "ColorIndex": 2
+    },
+    "6f33dc28-54df-4e02-95d9-e0637366a0c8": {
+      "ProjectGuid": "6f33dc28-54df-4e02-95d9-e0637366a0c8",
+      "DisplayName": "CIPLATFORM_SKILL_PM",
+      "ColorIndex": 3
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 4
+}
