@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "j3up1jnfvMMosFJjunFVe4HbWa6+iP2mw+FlVLw9QiA=",
+  "Hash": "LIvgVxIgaJQ8RRtujlo8xw42fci+xGwqtj18r3z5Ip4=",
   "Source": "CIPLATFORM_SKILL_PM",
   "BasePath": "_content/CIPLATFORM_SKILL_PM",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\SkillMaster\\CIPLATFORM_SKILL_PM\\CIPLATFORM_SKILL_PM\\wwwroot\\images\\Grow-Trees-On-the-path-to-environment-sustainability.png",
+      "SourceId": "CIPLATFORM_SKILL_PM",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\SkillMaster\\CIPLATFORM_SKILL_PM\\CIPLATFORM_SKILL_PM\\wwwroot\\",
+      "BasePath": "_content/CIPLATFORM_SKILL_PM",
+      "RelativePath": "images/Grow-Trees-On-the-path-to-environment-sustainability.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Grow-Trees-On-the-path-to-environment-sustainability.png"
     },
     {
       "Identity": "D:\\SkillMaster\\CIPLATFORM_SKILL_PM\\CIPLATFORM_SKILL_PM\\wwwroot\\js\\site.js",

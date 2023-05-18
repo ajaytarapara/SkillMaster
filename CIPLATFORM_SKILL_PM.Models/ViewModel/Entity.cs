@@ -6,13 +6,9 @@ using System.Threading.Tasks;
 
 namespace CIPLATFORM_SKILL_PM.Models.ViewModel
 {
-    public abstract class BaseEntity
-    {
 
-    }
-
-    public abstract class Entity<T> : BaseEntity, IEntity<T>
+    public class Entity<T> : IEntity<T>
     {
-        public virtual T Id { get; set; }
+        public T Id { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     }
 }

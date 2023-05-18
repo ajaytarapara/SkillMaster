@@ -12,11 +12,11 @@ namespace CIPlatform.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly ILoginService _userRepository;
+        private readonly ILoginService _loginservice;
 
         public AccountController(ILoginService loginService)
         {
-            _userRepository = loginService;
+            _loginservice = loginService;
         }
         public IActionResult Login()
         {
@@ -29,7 +29,7 @@ namespace CIPlatform.Controllers
         {
             string emailId = obj.EmailId;
             string password = obj.Password;
-            var isValidEmail = _userRepository.validateEmail(emailId);
+            var isValidEmail = _loginservice.validateEmail(emailId);
             return View();
         }
 

@@ -14,11 +14,11 @@ namespace CIPLATFORM_SKILL_PM.Repository.Repository
     public class Repository<T> : IRepository<T> where T : class
     
     {
-        private readonly SkillDbContext _db;
+        private readonly SkillMasterDbContext _db;
 
         protected DbSet<T> dbset;
 
-        public Repository(SkillDbContext db)
+        public Repository(SkillMasterDbContext db)
         {
             _db= db;
             this.dbset= _db.Set<T>();
@@ -28,12 +28,12 @@ namespace CIPLATFORM_SKILL_PM.Repository.Repository
             dbset.Add(entity);
            
         }
-        public virtual void Delete(T entity)
+        public  void Delete(T entity)
         {
             dbset.Remove(entity);
         }
 
-        public virtual void Edit(T entity)
+        public  void Edit(T entity)
         {
             _db.Entry(entity).State = EntityState.Modified;
         }

@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 
 namespace CIPLATFORM_SKILL_PM.Services.Interface
 {
-    public interface IEntityService<T> : IService
-   where T : BaseEntity
+    public interface IEntityService<T> where T : class
     {
         void Create(T entity);
         void Delete(T entity);

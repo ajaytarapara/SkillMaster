@@ -10,9 +10,9 @@ namespace CIPLATFORM_SKILL_PM.Repository.Repository
 {
     public class LoginRepository : Repository<User>, ILoginRepository
     {
-        private readonly protected SkillDbContext _entities;
+        private readonly protected SkillMasterDbContext _entities;
 
-        public LoginRepository(SkillDbContext context)
+        public LoginRepository(SkillMasterDbContext context)
               : base(context)
         {
             _entities = context;

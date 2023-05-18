@@ -3,12 +3,13 @@ using CIPLATFORM_SKILL_PM.Repository.Interface;
 using CIPLATFORM_SKILL_PM.Repository.Repository;
 using CIPLATFORM_SKILL_PM.Services.Interface;
 using CIPLATFORM_SKILL_PM.Services.Services;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<SkillDbContext>();
+builder.Services.AddDbContext<SkillMasterDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("SkillMaster")));
 builder.Services.AddScoped<ILoginRepository, LoginRepository>();
 builder.Services.AddScoped<ILoginService, LoginService>();
 

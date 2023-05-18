@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace CIPLATFORM_SKILL_PM.Models.Data
 {
-    public partial class User: BaseEntity
+    public class User
     {
         public int UserId { get; set; }
         public string? FirstName { get; set; }

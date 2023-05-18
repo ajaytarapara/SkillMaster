@@ -20,8 +20,6 @@ namespace CIPLATFORM_SKILL_PM.Services.Services
                 
                 _loginRepository = loginRepository;
             }
-
-
             public User GetById(int Id)
             {
                 return _loginRepository.GetById(Id);
