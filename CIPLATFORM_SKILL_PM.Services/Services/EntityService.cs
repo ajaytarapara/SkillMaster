@@ -1,5 +1,6 @@
 ﻿using CIPLATFORM_SKILL_PM.Models.ViewModel;
 using CIPLATFORM_SKILL_PM.Repository.Interface;
+using CIPLATFORM_SKILL_PM.Repository.Repository;
 using CIPLATFORM_SKILL_PM.Services.Interface;
 using System;
 using System.Collections.Generic;
@@ -13,14 +14,12 @@ namespace CIPLATFORM_SKILL_PM.Services.Services
 
     {
 
-        IRepository<T> _repository;
+        IGenericRepository<T> _repository;
 
-        public EntityService(IRepository<T> repository)
+        public EntityService(IGenericRepository<T> repository)
         {
             _repository = repository;
         }
-
-
         public  void Create(T entity)
         {
             if (entity == null)
@@ -29,7 +28,6 @@ namespace CIPLATFORM_SKILL_PM.Services.Services
             }
             _repository.Add(entity);
         }
-
 
         public  void Update(T entity)
         {

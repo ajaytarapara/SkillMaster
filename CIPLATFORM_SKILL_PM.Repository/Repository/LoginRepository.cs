@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CIPLATFORM_SKILL_PM.Repository.Repository
 {
-    public class LoginRepository : Repository<User>, ILoginRepository
+    public class LoginRepository : GenericRepository<User>, ILoginRepository
     {
         private readonly protected SkillMasterDbContext _entities;
 

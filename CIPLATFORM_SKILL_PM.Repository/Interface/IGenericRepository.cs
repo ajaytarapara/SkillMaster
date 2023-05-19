@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 namespace CIPLATFORM_SKILL_PM.Repository.Interface
 {
-    public interface IRepository<T> where T : class
+    public interface IGenericRepository<T> where T : class
     {
         public IEnumerable<T> GetAll();
         public void Add(T entity);

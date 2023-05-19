@@ -1,13 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "PeWh1M6FmF0KM8ETzUVkAWVrow53b4oKOQ60NjMFS7tD/AabQtfY/xekvyTMUfAZYu8Ce8SV8pb9JUoMjhsd1w==",
+  "dgSpecHash": "ynlLfpbvFjtvNrcHJjIXGEklqFJhpdgfm2xVNYUfWW5Kb+ohcd6YYMeD1ljuYphCUmEsEDs5zT1WF/6hcwcyYQ==",
   "success": true,
   "projectFilePath": "D:\\SkillMaster\\CIPLATFORM_SKILL_PM\\CIPLATFORM_SKILL_PM.Services\\CIPLATFORM_SKILL_PM.Services.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\tatva\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\tatva\\.nuget\\packages\\enums.net\\4.0.0\\enums.net.4.0.0.nupkg.sha512",
     "C:\\Users\\tatva\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\tatva\\.nuget\\packages\\mathnet.numerics.signed\\4.15.0\\mathnet.numerics.signed.4.15.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\tatva\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\tatva\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\tatva\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\tatva\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.16\\microsoft.entityframeworkcore.6.0.16.nupkg.sha512",

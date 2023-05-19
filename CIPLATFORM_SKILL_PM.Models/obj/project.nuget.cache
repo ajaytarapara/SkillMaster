@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "9WHCJCvydCtEfmereu8LN7Nxv0+YO3u+gM0w9ehs811G9vOoez+3zuH/UPbqxDxxmN5N+rplQbxygC6LvcftNA==",
+  "dgSpecHash": "WVLuvdGMRDVgIiP95+WmQVQAC/ghWqiA8nUhgOYcH+JvF9125XK2/uVGNfyyjoELIuGPhsrwBKgHjmUvk6zdug==",
   "success": true,
   "projectFilePath": "D:\\SkillMaster\\CIPLATFORM_SKILL_PM\\CIPLATFORM_SKILL_PM.Models\\CIPLATFORM_SKILL_PM.Models.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\tatva\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\tatva\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\tatva\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\tatva\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\tatva\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\tatva\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.16\\microsoft.entityframeworkcore.6.0.16.nupkg.sha512",

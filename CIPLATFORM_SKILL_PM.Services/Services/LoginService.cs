@@ -9,25 +9,37 @@ using System.Threading.Tasks;
 
 namespace CIPLATFORM_SKILL_PM.Services.Services
 {
-  
-        public class LoginService : EntityService<User>, ILoginService
-        {
-            ILoginRepository _loginRepository;
 
-            public LoginService(ILoginRepository loginRepository)
-                : base(loginRepository)
+    public class LoginService : EntityService<User>, ILoginService
+    {
+        ILoginRepository _loginRepository;
+
+        public LoginService(ILoginRepository loginRepository)
+            : base(loginRepository)
+        {
+
+            _loginRepository = loginRepository;
+        }
+        public User GetById(int Id)
+        {
+            return _loginRepository.GetById(Id);
+        }
+        public User ValidateEmail(string email)
+        {
+            return _loginRepository.GetByEmail(email);
+        }
+        public User ValidateUser(string email, string password)
+        {
+            User user= _loginRepository.GetByEmail(email);
+            if (user == null && user.Password == password)
             {
-                
-                _loginRepository = loginRepository;
+                return user;
             }
-            public User GetById(int Id)
+            else
             {
-                return _loginRepository.GetById(Id);
-            }
-            public User validateEmail(string email)
-            {
-                return _loginRepository.GetByEmail(email);
+                return null;
             }
         }
-    
+    }
+
 }

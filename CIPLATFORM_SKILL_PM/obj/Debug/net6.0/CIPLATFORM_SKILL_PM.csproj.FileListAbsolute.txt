@@ -81,3 +81,10 @@ D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM\bin\Debug\net6.0\runtimes
 D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
 D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM\bin\Debug\net6.0\AspNetCoreHero.ToastNotification.Views.dll
+D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM\bin\Debug\net6.0\AspNetCoreHero.ToastNotification.dll
+D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM\obj\Debug\net6.0\CIPLATFORM_SKILL_PM.MvcApplicationPartsAssemblyInfo.cs
+D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM\bin\Debug\net6.0\AutoMapper.dll
+D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

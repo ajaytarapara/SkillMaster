@@ -10,6 +10,7 @@ namespace CIPLATFORM_SKILL_PM.Services.Interface
     public interface ILoginService : IEntityService<User>
     {
         User GetById(int Id);
-        User validateEmail(string email);
+        User ValidateEmail(string email);
+        User ValidateUser(string email, string password);
     }
 }

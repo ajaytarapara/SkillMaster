@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CIPLATFORM_SKILL_PM.Repository.Interface
 {
-    public interface ILoginRepository : IRepository<User>
+    public interface ILoginRepository : IGenericRepository<User>
     {
         User GetById(int id);
         User GetByEmail(string email);

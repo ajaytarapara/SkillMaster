@@ -11,14 +11,14 @@ using System.Threading.Tasks;
 
 namespace CIPLATFORM_SKILL_PM.Repository.Repository
 {
-    public class Repository<T> : IRepository<T> where T : class
+    public class GenericRepository<T> : IGenericRepository<T> where T : class
     
     {
         private readonly SkillMasterDbContext _db;
 
         protected DbSet<T> dbset;
 
-        public Repository(SkillMasterDbContext db)
+        public GenericRepository(SkillMasterDbContext db)
         {
             _db= db;
             this.dbset= _db.Set<T>();
