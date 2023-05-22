@@ -15,6 +15,6 @@ namespace CIPLATFORM_SKILL_PM.Models.ViewModel
         public bool? Status { get; set; }
         public List<Skill>? skills { get; set; }
         public int? skillid { get; set; }
-        public decimal? TotalCount { get; set; }
+        public int TotalCount { get; set; }
     }
 }

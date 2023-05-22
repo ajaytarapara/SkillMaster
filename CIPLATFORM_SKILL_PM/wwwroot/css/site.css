@@ -237,3 +237,32 @@
 body {
     font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+#pagination {
+    display: flex;
+    justify-content: end;
+}
+
+#pagination-list {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+    #pagination-list li {
+        margin: 0 5px;
+    }
+
+        #pagination-list li a {
+            display: block;
+            padding: 5px;
+            text-decoration: none;
+            color: black;
+            border: 1px solid orange;
+            border-radius: 3px;
+        }
+
+        #pagination-list li.active a {
+            background-color: orange;
+            color: white;
+        }

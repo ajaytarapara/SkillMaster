@@ -1,5 +1,6 @@
-﻿@model CIPLATFORM_SKILL_PM.Models.ViewModel.SkillModel
-
+﻿@using PagedList
+@using PagedList.Mvc
+@model IPagedList<CIPLATFORM_SKILL_PM.Models.Data.Skill>
 <div class="table-responsive">
     <table class="table" style="border:1px solid rgb(197, 195, 195);">
         <thead style="background: #F8F9FC 0% 0% no-repeat padding-box;
@@ -13,7 +14,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var item in Model.skills)
+            @foreach (var item in Model)
             {
                 <tr>
 
@@ -54,7 +55,7 @@
         </tbody>
     </table>
 </div>
-
+@*
 
 @{
     int pageSize = 3;
@@ -78,4 +79,100 @@
             </ul>
         </nav>
     </div>
+</div>*@
+
+
+<div id="pagination" class="my-3">
+    <ul id="pagination-list" class="mb-3"></ul>
 </div>
+<script>
+
+
+    function confirmationForDelete(deleteId)
+    {
+        $("#delete-skill-id").attr("onclick", "deleteSkill(" + deleteId + "," + @Model.PageNumber + ")");
+    }
+
+
+    var currentPage = @Model.PageNumber;
+
+    function displayItems(itemsToDisplay)
+    {
+        // code to display the items for the current page
+    }
+
+    function displayPagination()
+    {
+        const totalPages = @Model.PageCount;
+        const paginationList = document.getElementById("pagination-list");
+        paginationList.innerHTML = "";
+
+        // create the previous button
+        const prevButton = document.createElement("li");
+        const prevLink = document.createElement("a");
+        prevLink.innerText = "Prev";
+        prevLink.href = "#";
+        prevButton.appendChild(prevLink);
+        paginationList.appendChild(prevButton);
+
+        // create the page number buttons
+        for (let i = 1; i <= totalPages; i++)
+        {
+            if (i == 1 || i == currentPage - 1 || i == currentPage || i == currentPage + 1 || i == totalPages)
+            {
+                const pageNumberButton = document.createElement("li");
+                const pageNumberLink = document.createElement("a");
+                pageNumberLink.innerText = i;
+                pageNumberLink.href = "#";
+                if (i == currentPage)
+                {
+                    pageNumberButton.classList.add("active");
+                }
+                pageNumberButton.appendChild(pageNumberLink);
+                paginationList.appendChild(pageNumberButton);
+            } else if (paginationList.lastChild.textContent !== "...")
+            {
+                const dots = document.createElement("li");
+                dots.innerText = "...";
+                paginationList.appendChild(dots);
+            }
+        }
+
+        // create the next button
+        const nextButton = document.createElement("li");
+        const nextLink = document.createElement("a");
+        nextLink.innerText = "Next";
+        nextLink.href = "#";
+        nextButton.appendChild(nextLink);
+        paginationList.appendChild(nextButton);
+    }
+
+    function setPage(pageNumber)
+    {
+        currentPage = pageNumber;
+        getSkillData(currentPage);
+
+        displayPagination();
+    }
+
+    displayItems();
+    displayPagination();
+    document.getElementById("pagination-list").addEventListener("click", function (e)
+    {
+        if (e.target.tagName === "A")
+        {
+            e.preventDefault();
+            if (e.target.innerText === "Prev" && currentPage > 1)
+            {
+                setPage(currentPage - 1);
+            } else if (e.target.innerText === "Next" && currentPage < @Model.PageCount)
+            {
+                setPage(currentPage + 1);
+            } else
+            {
+                setPage(parseInt(e.target.innerText));
+            }
+        }
+    });
+
+</script>

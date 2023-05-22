@@ -5,6 +5,7 @@ using CIPLATFORM_SKILL_PM.Models.Data;
 using CIPLATFORM_SKILL_PM.Models.ViewModel;
 using CIPLATFORM_SKILL_PM.Services.Interface;
 using Microsoft.AspNetCore.Mvc;
+using PagedList;
 
 namespace CIPLATFORM_SKILL_PM.Controllers
 {
@@ -21,6 +22,7 @@ namespace CIPLATFORM_SKILL_PM.Controllers
         }
         public IActionResult Admin_Skill_List()
         {
+
             return View();
         }
         [HttpPost]
@@ -35,15 +37,18 @@ namespace CIPLATFORM_SKILL_PM.Controllers
                 skill1.CreatedAt = DateTime.Now;
                 _adminService.Create(skill1);
                 _adminService.Save();
-                _notyf.Success("skill added successfully", 3);
             }
         }
-        public IActionResult GetSkillData()
+        public IActionResult GetSkillData(int? page, string searchSkill = "a")
         {
-            List<Skill> skills = _adminService.GetAll().ToList();
-            SkillModel skill = new SkillModel();
-            skill.skills = skills;
-            return PartialView("_SkillTable", skill);
+            int pageNumber = page ?? 1;
+            int pageSize = 10;
+
+            IEnumerable<Skill?> skills = _adminService.GetAll().ToList();
+            var pagedItems = skills.ToPagedList(pageNumber, pageSize);
+
+
+            return PartialView("_SkillTable", pagedItems);
         }
         public IActionResult getSkillforedit(int id)
         {
@@ -59,7 +64,6 @@ namespace CIPLATFORM_SKILL_PM.Controllers
             skill.UpdatedAt = DateTime.Now;
             _adminService.Update(skill);
             _adminService.Save();
-            _notyf.Success("skill edited successfully", 3);
         }
         [HttpPost]
         public void DeleteSkill(int id)

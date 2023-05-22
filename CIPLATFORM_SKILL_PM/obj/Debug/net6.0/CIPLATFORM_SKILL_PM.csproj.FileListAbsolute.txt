@@ -88,3 +88,5 @@ D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM\bin\Debug\net6.0\Newtonso
 D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM\obj\Debug\net6.0\CIPLATFORM_SKILL_PM.MvcApplicationPartsAssemblyInfo.cs
 D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM\bin\Debug\net6.0\AutoMapper.dll
 D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM\bin\Debug\net6.0\PagedList.dll
+D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM\bin\Debug\net6.0\PagedList.Mvc.dll

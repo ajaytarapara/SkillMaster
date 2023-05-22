@@ -1,12 +1,12 @@
 ﻿$(document).ready(function () {
-    getSkillData();
+    getSkillData(1);
 });
-function getSkillData() {
+function getSkillData(pageNumber) {
     console.log("click");
     $.ajax({
         type: "Get",
         url: '/Admin/GetSkillData',
-        data: {},
+        data: { page: pageNumber},
         dataType: "html",
         success: function (data) {
             $("#skillTable").html("");
@@ -14,6 +14,7 @@ function getSkillData() {
             editskill();
             addskill();
             deleteskill();
+            toastr.success("dsaf");
         },
         error: function (xhr, status, error) {
             // Handle error
@@ -34,8 +35,8 @@ function addskill() {
             url: '/Admin/AdminSkillAdd',
             data: { skillname: skillname, status: status },
             success: function (data) {
-                getSkillData();
                 alert("skill added successfully");
+                location.reload();
             },
             error: function (xhr, status, error) {
                 // Handle error
@@ -76,6 +77,7 @@ function editskill() {
             url: '/Admin/EditSkill',
             data: { id: skillId, status: skillstatus, skillName: skillnameedit },
             success: function (data) {
+                alert("skill edited successfully");
             },
             error: function (xhr, status, error) {
                 // Handle error
@@ -97,7 +99,7 @@ function deleteskill() {
                 url: '/Admin/DeleteSkill',
                 data: { id: skillidfordelete },
                 success: function (data) {
-
+                    alert("skill deleted successfully");
                     location.reload();
                 },
                 error: function (xhr, status, error) {
