@@ -15,7 +15,8 @@ namespace CIPLATFORM_SKILL_PM.Models.MapperHelper
         {
             CreateMap<User, LoginModel>().ReverseMap();
             CreateMap<User, SessionDetailsViewModel>()
-           .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => $"{src.FirstName} {src.LastName}")); 
+           .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => $"{src.FirstName} {src.LastName}"));
+            CreateMap<Skill, SkillModel>().ReverseMap();
         }
     }
 }

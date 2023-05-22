@@ -45,5 +45,9 @@ namespace CIPLATFORM_SKILL_PM.Services.Services
         {
             return _repository.GetAll();
         }
+        public void Save()
+        {
+            _repository.Save();
+        }
     }
 }

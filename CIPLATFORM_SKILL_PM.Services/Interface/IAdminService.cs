@@ -10,6 +10,6 @@ namespace CIPLATFORM_SKILL_PM.Services.Interface
 {
     public interface IAdminService : IEntityService<Skill>
     {
-      
+        public Skill GetSkillById(int id);
     }
 }

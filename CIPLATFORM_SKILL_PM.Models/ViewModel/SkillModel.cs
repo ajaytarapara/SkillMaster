@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CIPLATFORM_SKILL_PM.Models.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -12,5 +13,8 @@ namespace CIPLATFORM_SKILL_PM.Models.ViewModel
         [Required]
         public string? SkillName { get; set; }
         public bool? Status { get; set; }
+        public List<Skill>? skills { get; set; }
+        public int? skillid { get; set; }
+        public decimal? TotalCount { get; set; }
     }
 }

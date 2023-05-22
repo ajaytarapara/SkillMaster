@@ -31,7 +31,7 @@ namespace CIPLATFORM_SKILL_PM.Services.Services
         public User ValidateUser(string email, string password)
         {
             User user= _loginRepository.GetByEmail(email);
-            if (user == null && user.Password == password)
+            if (user != null && user.Password == password)
             {
                 return user;
             }

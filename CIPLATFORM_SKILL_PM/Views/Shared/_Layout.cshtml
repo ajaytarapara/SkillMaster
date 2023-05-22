@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="~/CIPLATFORM_SKILL_PM.styles.css" asp-append-version="true" />
 </head>
 <body>
-    @RenderBody()
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
-    <script src="~/js/site.js" asp-append-version="true"></script>
     @await Component.InvokeAsync("Notyf")
+    @RenderSection("Javascript",required:false)
     @RenderSection("Scripts", required: false)
+    @RenderBody()
 </body>
 </html>

@@ -14,5 +14,6 @@ namespace CIPLATFORM_SKILL_PM.Repository.Interface
         void Delete(T entity);
         void Edit(T entity);
         public T GetFirstordefault(Expression<Func<T, bool>> filter);
+        void Save();
     }
 }

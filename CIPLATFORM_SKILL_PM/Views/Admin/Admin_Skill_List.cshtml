@@ -121,47 +121,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="row mt-4">
-                    <div class="table-responsive">
-                        <table class="table" style="border:1px solid rgb(197, 195, 195);">
-                            <thead style="background: #F8F9FC 0% 0% no-repeat padding-box;
-                                box-shadow: 0px 2px 3px #0000000F;">
-                                <tr>
-                                    <th>Title</th>
-                                    <th>Status</th>
-                                    <th>Created at</th>
-                                    <th>Edit</th>
-                                    <th>Delete</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, ad.</td>
-                                    <td>Active</td>
-                                    <td>
-                                        2/2/2000
-                                    </td>
-                                    <td>
-                                        <a href="#">
-                                            <svg style="color:orange;width: 20px;height: 20px;"
-                                                 xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                 fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0                                                           0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
-                                                <path fill-rule="evenodd"
-                                                      d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0                                                           1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
-                                            </svg>
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <button style="background: none;padding: 0px;border:none;">
-                                            <img style="width:20px;height: 20px;"
-                                                 src="~/images/bin.png">
-                                        </button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                <div class="row mt-4" id="skillTable">
                 </div>
             </div>
         </div>
@@ -177,29 +137,87 @@
                 <h5 class="modal-title" id="staticBackdropLabel">Add Skill</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form method="post" action="AdminSkillAdd">
+            <form>
                 <div class="modal-body">
                     <label>Skill</label><br>
-                    <input asp-for="SkillName" style="width:100%" cl s="form-control mt-1" type="text" />
+                    <input id="skillname" asp-for="SkillName" style="width:100%" class="form-control mt-1" type="text" />
+                    <span asp-validation-for="SkillName" class="text-danger"></span>
                     <div class="py-2">
                         <label asp-for="Status" class="form-label">Status</label>
-                        <select asp-for="Status" id="" class="form-select">
-                            <option value="false">Daily</option>
-                            <option value="true">Weekly</option>
-                            <option value="1">Monthly</option>
+                        <select id="status" asp-for="Status" id="" class="form-select">
+                            <option value="true">Active</option>
+                            <option value="false">Deactivate</option>
                         </select>
                     </div>
                 </div>
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <input type="submit" class="btn btn-danger" value="Add" />
                 <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <input type="submit" class="btn btn-danger" value="Add" id="addskill" />
                 </div>
             </form>
-
         </div>
     </div>
 </div>
 @*=====================================================================================================================================*@
+
+@*==============================================================modals for edit skill================================================================================*@
+
+<!-- Modal -->
+<div class="modal fade" id="EditskillModal" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" style="top:25%;left:7%">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Edit Skill</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form>
+                <div class="modal-body">
+                    <label>Skill</label><br>
+                    <input type="hidden" id="EditSkillId" />
+                    <input id="editskillname" asp-for="SkillName" style="width:100%" class="form-control mt-1" type="text" />
+                    <span asp-validation-for="SkillName" class="text-danger"></span>
+                    <div class="py-2">
+                        <label asp-for="Status" class="form-label">Status</label>
+                        <select id="editstatus" asp-for="Status" id="" class="form-select">
+                            <option value="true">Active</option>
+                            <option value="false">Deactivate</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-danger" id="EditSkill">Edit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@*=====================================================================================================================================*@
+
+@*==============================================================modals for delete skill================================================================================*@
+
+<!-- Modal -->
+
+<div class="modal fade" id="mydeleteModal" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" style="top:25%;left:7%">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Delete Skill</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="deleteSkillId" />
+                <p>Do you really want to delete these records?</p>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="deleteskill">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+@*=============================================================================================================================================*@
+
 <script src="js/bootstrap.bundle.js"></script>
 <script>
     function adminpage_openNav() {
@@ -214,3 +232,6 @@
         document.getElementById("admin-page-navigation").style.opacity = "0";
     }
 </script>
+ @section Javascript{
+<script src="~/js/AdminSkill.js" asp-append-version="true"></script>
+  }

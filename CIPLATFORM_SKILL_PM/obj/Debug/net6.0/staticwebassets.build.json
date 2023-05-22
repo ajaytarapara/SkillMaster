@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "tVrJ3e4NpjJ1EK+IJflK+8+j+bXn2MHGj6W5gD6TH38=",
+  "Hash": "A+ckdRrosOPRle8k0gcsunJt1ezHe+H3rdyZ42EAiFI=",
   "Source": "CIPLATFORM_SKILL_PM",
   "BasePath": "_content/CIPLATFORM_SKILL_PM",
   "Mode": "Default",
@@ -219,6 +219,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\volunteer1.png"
+    },
+    {
+      "Identity": "D:\\SkillMaster\\CIPLATFORM_SKILL_PM\\CIPLATFORM_SKILL_PM\\wwwroot\\js\\AdminSkill.js",
+      "SourceId": "CIPLATFORM_SKILL_PM",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\SkillMaster\\CIPLATFORM_SKILL_PM\\CIPLATFORM_SKILL_PM\\wwwroot\\",
+      "BasePath": "_content/CIPLATFORM_SKILL_PM",
+      "RelativePath": "js/AdminSkill.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\AdminSkill.js"
     },
     {
       "Identity": "D:\\SkillMaster\\CIPLATFORM_SKILL_PM\\CIPLATFORM_SKILL_PM\\wwwroot\\js\\site.js",

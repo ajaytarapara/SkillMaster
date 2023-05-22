@@ -69,6 +69,7 @@ namespace CIPlatform.Controllers
                 if (isValidUser.Role.ToLower() == "admin")
                 {
                     _notyf.Success("LoginSuccessFullyaddmin", 3);
+                    return RedirectToAction("Admin_Skill_List", "Admin");
                 }
             }
             return View();

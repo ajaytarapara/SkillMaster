@@ -13,5 +13,6 @@ namespace CIPLATFORM_SKILL_PM.Services.Interface
         void Delete(T entity);
         IEnumerable<T> GetAll();
         void Update(T entity);
+        void Save();
     }
 }
