@@ -10,7 +10,6 @@ namespace CIPLATFORM_SKILL_PM.Repository.Interface
     {
         public IEnumerable<T> GetAll();
         public void Add(T entity);
-        public void Remove(T entity);
         void Delete(T entity);
         void Edit(T entity);
         public T GetFirstordefault(Expression<Func<T, bool>> filter);

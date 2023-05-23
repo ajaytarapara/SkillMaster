@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "A+ckdRrosOPRle8k0gcsunJt1ezHe+H3rdyZ42EAiFI=",
+  "Hash": "LxIerpGlq+UAS3woh3AG9kHPmUU308wi6od1/NBgvdw=",
   "Source": "CIPLATFORM_SKILL_PM",
   "BasePath": "_content/CIPLATFORM_SKILL_PM",
   "Mode": "Default",
@@ -185,6 +185,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Grow-Trees-On-the-path-to-environment-sustainability.png"
+    },
+    {
+      "Identity": "D:\\SkillMaster\\CIPLATFORM_SKILL_PM\\CIPLATFORM_SKILL_PM\\wwwroot\\images\\Screenshot (187).png",
+      "SourceId": "CIPLATFORM_SKILL_PM",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\SkillMaster\\CIPLATFORM_SKILL_PM\\CIPLATFORM_SKILL_PM\\wwwroot\\",
+      "BasePath": "_content/CIPLATFORM_SKILL_PM",
+      "RelativePath": "images/Screenshot (187).png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Screenshot (187).png"
     },
     {
       "Identity": "D:\\SkillMaster\\CIPLATFORM_SKILL_PM\\CIPLATFORM_SKILL_PM\\wwwroot\\images\\search.png",

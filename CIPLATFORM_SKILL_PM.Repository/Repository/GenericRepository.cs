@@ -50,10 +50,6 @@ namespace CIPLATFORM_SKILL_PM.Repository.Repository
             return query.FirstOrDefault();
         }
 
-        public void Remove(T entity)
-        {
-           dbset.Remove(entity);
-        }
         public void Save()
         {
             _db.SaveChanges();

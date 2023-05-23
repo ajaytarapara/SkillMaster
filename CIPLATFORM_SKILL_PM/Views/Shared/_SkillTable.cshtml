@@ -19,21 +19,22 @@
                 <tr>
 
                     <td>@item.SkillName</td>
-                      @if (item.Status == true)
-                        {
-                            <td style="color: green;">active</td>
-                        }
-                        else
-                        {
-                            <td style="color: red;">Deactivate</td>
+                    @if (item.Status == true)
+                    {
+                        <td style="color: green;">active</td>
+                    }
+                    else
+                    {
+                        <td style="color: red;">Deactivate</td>
 
-                        }
+                    }
                     <td>
                         @item.CreatedAt.ToString().Substring(0,10)
-                        
+
                     </td>
                     <td>
-                        <button style="border:none;background:none" data-bs-toggle="modal" data-bs-target="#EditskillModal" href="#" class="editbuttonskill" id="@item.SkillId">
+                        <button style="border:none;background:none" data-bs-toggle="modal" onclick="editskill(@item.SkillId,@Model.PageNumber)"
+                        data-bs-target="#EditskillModal" type="button" class="editbuttonskill">
                             <svg style="color:orange;width: 20px;height: 20px;"
                              xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                              fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
@@ -44,7 +45,8 @@
                         </button>
                     </td>
                     <td>
-                        <button class="deletebtn"  data-bs-target="#mydeleteModal" data-bs-toggle="modal" id="@item.SkillId" style="background: none;padding: 0px;border:none;">
+                        <button class="btn  m-0 p-0" type="button" data-bs-toggle="modal" data-bs-target="#confirm-delete-skill-modal" 
+                        onclick="confirmationForDelete(@item.SkillId,@Model.PageNumber)">
                             <img style="width:20px;height: 20px;"
                              src="~/images/bin.png">
                         </button>
@@ -55,36 +57,11 @@
         </tbody>
     </table>
 </div>
-@*
-
-@{
-    int pageSize = 3;
-    double pageCount = Math.Ceiling((Model.TotalCount*1.0) / (pageSize*1.0));
-}
-<div class="pe-0 pe-sm-5 d-flex justify-content-end align-items-center mt-4">
-    <div id="pages-@pageCount" class="Pagination Pagination-total" style="display:flex">
-        <nav aria-label="Page navigation example">
-            <ul class="pagination justify-content-center" id="pagination">
-                <li style="cursor:pointer;" class="page-item"><a class="page-link">&lt;&lt;</a></li>
-                <li style="cursor:pointer;" class="page-item"><a class="page-link">&lt;</a></li>
-
-                @for (int i = 1; i <= pageCount; i++)
-                {
-                    <li class="page-item ">
-                        <a class="page-link" href="">@i</a>
-                    </li>
-                }
-                <li style="cursor:pointer;" class="page-item"><a class="page-link">&gt;</a></li>
-                <li style="cursor:pointer;" class="page-item"><a class="page-link">&gt;&gt;</a></li>
-            </ul>
-        </nav>
-    </div>
-</div>*@
-
 
 <div id="pagination" class="my-3">
     <ul id="pagination-list" class="mb-3"></ul>
 </div>
+
 <script>
 
 

@@ -1,4 +1,7 @@
 ﻿@model CIPLATFORM_SKILL_PM.Models.ViewModel.SkillModel
+<div style="height:100vh;width:100vw;" id="loader">
+    <div class="spinner-border text-danger"></div>
+</div>
      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <div class="container-fluid">
@@ -87,7 +90,7 @@
                      id="admin-page-right-nav">
                     <span style="font-size:30px;cursor:pointer" onclick="adminpage_openNav()"
                           class="d-lg-none d-flex" style="position:absolute;display: inline-flex;">&#9776;</span>
-                    Thursday,November 3 2022,10:06 AM
+                    @DateTime.Now
                 </div>
                 <div class="col-md-3 col-sm-1">
                 </div>
@@ -111,7 +114,7 @@
                          style="align-items: center;display: flex;justify-content:space-between;flex-direction: row;border:1px solid gray;height:50px;
                                     border-radius: 10px;margin-left:10px;">
                         <img src="~/images/search.png" style="height:20px;">
-                        <input type="text" name="" id="" placeholder="Search" style="width:90%;border: none;">
+                        <input type="text"  id="searchskill" placeholder="Search" style="width:90%;border: none;">
                     </div>
                     <div class="col-5">
                     </div>
@@ -129,96 +132,8 @@
         </div>
     </div>
 </div>
-@*==============================================================modals for add skill================================================================================*@
+@Html.Partial("_ModalSkillCrud")
 
-<!-- Modal -->
-<div class="modal fade" id="AddskillModal" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" style="top:25%;left:7%">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Add Skill</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <form>
-                <div class="modal-body">
-                    <label>Skill</label><br>
-                    <input id="skillname" asp-for="SkillName" style="width:100%" class="form-control mt-1" type="text" />
-                    <span asp-validation-for="SkillName" class="text-danger"></span>
-                    <div class="py-2">
-                        <label asp-for="Status" class="form-label">Status</label>
-                        <select id="status" asp-for="Status" id="" class="form-select">
-                            <option value="true">Active</option>
-                            <option value="false">Deactivate</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <input type="submit" class="btn btn-danger" value="Add" id="addskill" />
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-@*=====================================================================================================================================*@
-
-@*==============================================================modals for edit skill================================================================================*@
-
-<!-- Modal -->
-<div class="modal fade" id="EditskillModal" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" style="top:25%;left:7%">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Edit Skill</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <form>
-                <div class="modal-body">
-                    <label>Skill</label><br>
-                    <input type="hidden" id="EditSkillId" />
-                    <input id="editskillname" asp-for="SkillName" style="width:100%" class="form-control mt-1" type="text" />
-                    <span asp-validation-for="SkillName" class="text-danger"></span>
-                    <div class="py-2">
-                        <label asp-for="Status" class="form-label">Status</label>
-                        <select id="editstatus" asp-for="Status" id="" class="form-select">
-                            <option value="true">Active</option>
-                            <option value="false">Deactivate</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-danger" id="EditSkill">Edit</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-@*=====================================================================================================================================*@
-
-@*==============================================================modals for delete skill================================================================================*@
-
-<!-- Modal -->
-
-<div class="modal fade" id="mydeleteModal" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" style="top:25%;left:7%">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Delete Skill</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <input type="hidden" id="deleteSkillId" />
-                <p>Do you really want to delete these records?</p>
-            </div>
-            <div class="modal-footer justify-content-center">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="deleteskill">Delete</button>
-            </div>
-        </div>
-    </div>
-</div>
-@*=============================================================================================================================================*@
 
 <script src="js/bootstrap.bundle.js"></script>
 <script>
