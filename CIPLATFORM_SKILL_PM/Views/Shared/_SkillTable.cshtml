@@ -83,7 +83,7 @@
         // create the previous button
         const prevButton = document.createElement("li");
         const prevLink = document.createElement("a");
-        prevLink.innerText = "Prev";
+        prevLink.innerText = "< Prev";
         prevLink.href = "#";
         prevButton.appendChild(prevLink);
         paginationList.appendChild(prevButton);
@@ -114,7 +114,7 @@
         // create the next button
         const nextButton = document.createElement("li");
         const nextLink = document.createElement("a");
-        nextLink.innerText = "Next";
+        nextLink.innerText = "Next >";
         nextLink.href = "#";
         nextButton.appendChild(nextLink);
         paginationList.appendChild(nextButton);
@@ -124,7 +124,6 @@
     {
         currentPage = pageNumber;
         getSkillData(currentPage);
-
         displayPagination();
     }
 
@@ -135,10 +134,10 @@
         if (e.target.tagName === "A")
         {
             e.preventDefault();
-            if (e.target.innerText === "Prev" && currentPage > 1)
+            if (e.target.innerText === "< Prev" && currentPage > 1)
             {
                 setPage(currentPage - 1);
-            } else if (e.target.innerText === "Next" && currentPage < @Model.PageCount)
+            } else if (e.target.innerText === "Next >" && currentPage < @Model.PageCount)
             {
                 setPage(currentPage + 1);
             } else

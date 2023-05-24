@@ -3,8 +3,7 @@
     searchskill();
 });
 
-function getSkillData(pageNumber) {
-    var orderBy = 0;
+function getSkillData(pageNumber,orderBy) {
     $.ajax({
         type: "post",
         url: '/AdminSkill/GetSkillData',
@@ -21,6 +20,11 @@ function getSkillData(pageNumber) {
         }
     });
 }
+
+function sortby(orderBy) {
+    getSkillData(1,orderBy);
+}
+
 
 var skillId = "";
 function editskill(SkillId, PageNumber) {

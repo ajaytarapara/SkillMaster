@@ -169,6 +169,7 @@
     width: 80%;
     padding: 4px;
     margin-top: 10px;
+    font-size:30px;
 }
 
     .admin-page-button-nav:hover {
@@ -263,15 +264,27 @@ body {
     }
 
         #pagination-list li a {
-            display: block;
+            display: flex;
             padding: 5px;
             text-decoration: none;
             color: black;
             border: 1px solid orange;
             border-radius: 3px;
+            width: 62px;
+            justify-content: center;
+            align-items: center;
         }
 
         #pagination-list li.active a {
             background-color: orange;
             color: white;
         }
+#menudropdown {
+    margin-left: 10px;
+    height: 49px !important;
+    border: 1px solid black;
+    width: 113px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
