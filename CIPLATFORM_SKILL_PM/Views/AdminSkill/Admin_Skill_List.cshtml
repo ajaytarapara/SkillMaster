@@ -2,8 +2,8 @@
 <div style="height:100vh;width:100vw;" id="loader">
     <div class="spinner-border text-danger"></div>
 </div>
-     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
-    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-3 col-md-12 d-lg-flex flex-column" id="admin-page-navigation">
@@ -100,13 +100,21 @@
                             style="border: none; background: white;margin-left: 10px;height: 30px;"
                             class="dropdown-toggle bg-light user-btn" type="button" id="dropdownMenu2"
                             data-bs-toggle="dropdown" aria-expanded="false">
+
                         john due
                     </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <li class="dropdownnavbarlinks">
+                            <button class="dropdown-item" type="button">
+                                <a style="text-decoration:none;color:black;" href="@Url.Action("logout", "AdminSkill")">logout </a>
+                            </button>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="container mt-3">
                 <h1>
-                    Skill
+                    Skill Master
                 </h1>
                 <hr>
                 <div class="row mt-4" style="justify-content: space-between;">
@@ -114,7 +122,7 @@
                          style="align-items: center;display: flex;justify-content:space-between;flex-direction: row;border:1px solid gray;height:50px;
                                     border-radius: 10px;margin-left:10px;">
                         <img src="~/images/search.png" style="height:20px;">
-                        <input type="text"  id="searchskill" placeholder="Search" style="width:90%;border: none;">
+                        <input type="text" id="searchskill" placeholder="Search" style="width:90%;border: none;padding:5px">
                     </div>
                     <div class="col-5">
                     </div>

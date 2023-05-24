@@ -19,8 +19,12 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SkillMaster/CIPLATFORM_SKILL_PM/CIPLATFORM_SKILL_PM/Views/Admin/Admin_Skill_List.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5fU2tpbGxfTGlzdC5jc2h0bWw=
+[D:/SkillMaster/CIPLATFORM_SKILL_PM/CIPLATFORM_SKILL_PM/Views/AdminSkill/Admin_Skill_List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5Ta2lsbFxBZG1pbl9Ta2lsbF9MaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SkillMaster/CIPLATFORM_SKILL_PM/CIPLATFORM_SKILL_PM/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/SkillMaster/CIPLATFORM_SKILL_PM/CIPLATFORM_SKILL_PM/Views/Shared/_ModalSkillCrud.cshtml]

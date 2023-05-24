@@ -18,10 +18,5 @@ namespace CIPLATFORM_SKILL_PM.Services.Services
         {
             _repository = repository;
         }
-
-        public Skill GetSkillById(int id)
-        {
-          return _repository.GetFirstordefault(T=>T.SkillId==id);
-        }
     }
 }

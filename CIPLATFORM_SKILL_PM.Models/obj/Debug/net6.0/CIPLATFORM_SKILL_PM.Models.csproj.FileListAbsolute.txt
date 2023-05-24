@@ -11,4 +11,3 @@ D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Models\obj\Debug\net6.0\C
 D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Models\obj\Debug\net6.0\ref\CIPLATFORM_SKILL_PM.Models.dll
 D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Models\obj\Debug\net6.0\CIPLATFORM_SKILL_PM.Models.pdb
 D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Models\obj\Debug\net6.0\CIPLATFORM_SKILL_PM.Models.genruntimeconfig.cache
-D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Models\obj\Debug\net6.0\CIPLATFORM_SKILL_PM.Models.csproj.AssemblyReference.cache

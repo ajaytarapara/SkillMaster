@@ -24,15 +24,10 @@ namespace CIPlatform.Controllers
         private readonly IMapper _mapper;
         public AccountController(ILoginService loginService, IConfiguration _configuration, INotyfService notyf, IHttpContextAccessor httpContextAccessor,IMapper mapper)
         {
-            _loginservice = loginService;
-            configuration = _configuration;
-            _notyf = notyf;
-            _httpContextAccessor = httpContextAccessor;
-            _mapper = mapper;
+            _loginservice = loginService;configuration = _configuration; _notyf = notyf;  _httpContextAccessor = httpContextAccessor;_mapper = mapper;
         }
         public IActionResult Login()
         {
-
             return View();
         }
         [HttpPost]
@@ -64,14 +59,16 @@ namespace CIPlatform.Controllers
                 HttpContext.Session.SetString("useremail", obj.EmailId);
                 if (isValidUser.Role.ToLower() == "volunteer")
                 {
+                    HttpContext.Session.SetString("useremail",isValidUser.Email);
                     _notyf.Success("LoginSuccessFullyvol", 3);
                 }
                 if (isValidUser.Role.ToLower() == "admin")
                 {
+                    HttpContext.Session.SetString("useremail", isValidUser.Email);
                     _notyf.Success("LoginSuccessFullyaddmin", 3);
-                    return RedirectToAction("Admin_Skill_List", "Admin");
+                    return RedirectToAction("Admin_Skill_List", "AdminSkill", isValidUser.Email);
                 }
-            }
+            }    
             return View();
         }
 

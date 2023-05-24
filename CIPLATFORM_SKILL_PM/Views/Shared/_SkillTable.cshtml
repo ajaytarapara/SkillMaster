@@ -1,6 +1,7 @@
 ﻿@using PagedList
 @using PagedList.Mvc
-@model IPagedList<CIPLATFORM_SKILL_PM.Models.Data.Skill>
+
+@model IPagedList<CIPLATFORM_SKILL_PM.Models.ViewModel.SkillModel>
 <div class="table-responsive">
     <table class="table" style="border:1px solid rgb(197, 195, 195);">
         <thead style="background: #F8F9FC 0% 0% no-repeat padding-box;
@@ -8,7 +9,6 @@
             <tr>
                 <th>Title</th>
                 <th>Status</th>
-                <th>Created at</th>
                 <th>Edit</th>
                 <th>Delete</th>
             </tr>
@@ -29,11 +29,7 @@
 
                     }
                     <td>
-                        @item.CreatedAt.ToString().Substring(0,10)
-
-                    </td>
-                    <td>
-                        <button style="border:none;background:none" data-bs-toggle="modal" onclick="editskill(@item.SkillId,@Model.PageNumber)"
+                        <button style="border:none;background:none" data-bs-toggle="modal" onclick="editskill(@item.skillid,@Model.PageNumber)"
                         data-bs-target="#EditskillModal" type="button" class="editbuttonskill">
                             <svg style="color:orange;width: 20px;height: 20px;"
                              xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -46,7 +42,7 @@
                     </td>
                     <td>
                         <button class="btn  m-0 p-0" type="button" data-bs-toggle="modal" data-bs-target="#confirm-delete-skill-modal" 
-                        onclick="confirmationForDelete(@item.SkillId,@Model.PageNumber)">
+                        onclick="confirmationForDelete(@item.skillid,@Model.PageNumber)">
                             <img style="width:20px;height: 20px;"
                              src="~/images/bin.png">
                         </button>
@@ -151,5 +147,4 @@
             }
         }
     });
-
 </script>
