@@ -16,16 +16,23 @@ namespace CIPLATFORM_SKILL_PM.Controllers
         private readonly Services.Interface.IAdminService _adminService;
         private readonly IMapper _mapper;
         private readonly INotyfService _notyf;
-        public AdminSkillController(IAdminService adminService, IMapper mapper, INotyfService notyf)
+        private readonly ILoginService _loginService;
+        public AdminSkillController(IAdminService adminService, IMapper mapper, INotyfService notyf,ILoginService loginService)
         {
-            _adminService = adminService; _mapper = mapper; _notyf = notyf;
+            _adminService = adminService; _mapper = mapper; _notyf = notyf;_loginService=loginService; 
         }
         public IActionResult Admin_Skill_List()
         {
             string userSessionEmailId = HttpContext.Session.GetString("useremail");
             if (userSessionEmailId == null) { return RedirectToAction("Login", "Account"); }
-            return View();
+            User user = _loginService.ValidateEmail(userSessionEmailId);
+            SkillModel skillModel = new SkillModel();
+            skillModel.userName=user.FirstName+" "+user.LastName;
+            return View(skillModel);
         }
+        //================================
+        //Skill Add
+        //================================
         [HttpPost]
         public IActionResult AdminSkillAdd(string skillname, bool status)
         {
@@ -34,10 +41,8 @@ namespace CIPLATFORM_SKILL_PM.Controllers
                 Skill skillexist = _adminService.GetFirstordefault(t => t.SkillName.Contains(skillname));
                 if (skillexist == null)
                 {
-                    SkillModel skill = new SkillModel(); skill.Status = status; skill.SkillName = skillname; Skill skill1 = _mapper.Map<Skill>(skill); skill1.CreatedAt = DateTime.Now;
-                    _adminService.Create(skill1);
-                    _adminService.Save();
-                    ModelState.Clear();
+                    _adminService.Create(new Skill { Status = status, SkillName = skillname, CreatedAt = DateTime.Now });
+                    _adminService.Save();ModelState.Clear();
                     _notyf.Success("skill added successfully ", 3); return Ok(new { data = 1 });
                 }
                 else
@@ -50,6 +55,9 @@ namespace CIPLATFORM_SKILL_PM.Controllers
                 _notyf.Error("data is not valid", 3); return BadRequest("data is not valid");
             }
         }
+        //================================
+        //Skill data get with pagination
+        //================================
         [HttpPost]
         public IActionResult GetSkillData(int? page, string searchText, int orderBy = 0)
         {
@@ -58,6 +66,9 @@ namespace CIPLATFORM_SKILL_PM.Controllers
             x => new SkillModel { skillid = x.SkillId, SkillName = x.SkillName, Status = x.Status }, q => orderBy == 0 ? q.OrderBy(x => x.SkillName) : q.OrderByDescending(x => x.SkillName));
             return PartialView("_SkillTable", skillViewModels);
         }
+        //================================
+        //Skill edit
+        //================================
         public IActionResult getSkillforedit(int id)
         {
             Skill skill = _adminService.GetFirstordefault(t => t.SkillId==id);
@@ -68,13 +79,12 @@ namespace CIPLATFORM_SKILL_PM.Controllers
         {
             if (ModelState.IsValid)
             {
-                Skill skillexist = _adminService.GetFirstordefault(t => t.SkillName.Contains(skillName));
+                Skill skillexist = _adminService.GetFirstordefault(t => t.SkillName.Contains(skillName) && t.SkillId==id && t.Status==status);
                 if (skillexist == null)
                 {
-                    Skill skill = _adminService.GetFirstordefault(t=>t.SkillId==id); skill.SkillName = skillName; skill.Status = status; skill.UpdatedAt = DateTime.Now;
-                    _adminService.Update(skill); _adminService.Save();
-                    _notyf.Success("skill edited successfully", 3);
-                    return Ok(new { data = 1 });
+                    _adminService.Update(new Skill { SkillId = id, SkillName = skillName,Status = status, UpdatedAt =DateTime.Now}); 
+                    _adminService.Save();
+                    _notyf.Success("skill edited successfully", 3); return Ok(new { data = 1 });
                 }
                 return BadRequest("Skill Already Exists");
             }
@@ -83,12 +93,18 @@ namespace CIPLATFORM_SKILL_PM.Controllers
                 return BadRequest("your data can not be Empty");
             }
         }
+        //================================
+        //Skill delete
+        //================================
         [HttpPost]
         public void DeleteSkill(int id)
         {
             Skill skill = _adminService.GetFirstordefault(t => t.SkillId == id);
             _adminService.Delete(skill); _adminService.Save();
         }
+        //================================
+        //logout admin
+        //================================
         public IActionResult logout()
         {
             HttpContext.Session.Remove("useremail"); HttpContext.Session.Clear();

@@ -16,5 +16,6 @@ namespace CIPLATFORM_SKILL_PM.Models.ViewModel
         public IEnumerable<Skill>? skills { get; set; }
         public int? skillid { get; set; }
         public int TotalCount { get; set; }
+        public string? userName { get; set; }
     }
 }
