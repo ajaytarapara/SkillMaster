@@ -30,7 +30,7 @@
                     }
                     <td>
                         <button style="border:none;background:none" data-bs-toggle="modal" onclick="editskill(@item.skillid,@Model.PageNumber)"
-                        data-bs-target="#EditskillModal" type="button" class="editbuttonskill">
+                            data-bs-target="#EditskillModal" type="button" class="editbuttonskill">
                             <svg style="color:orange;width: 20px;height: 20px;"
                              xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                              fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
@@ -41,8 +41,8 @@
                         </button>
                     </td>
                     <td>
-                        <button class="btn  m-0 p-0" type="button" data-bs-toggle="modal" data-bs-target="#confirm-delete-skill-modal" 
-                        onclick="confirmationForDelete(@item.skillid,@Model.PageNumber)">
+                        <button class="btn  m-0 p-0" type="button" data-bs-toggle="modal" data-bs-target="#confirm-delete-skill-modal"
+                            onclick="confirmationForDelete(@item.skillid,@Model.PageNumber)">
                             <img style="width:20px;height: 20px;"
                              src="~/images/bin.png">
                         </button>
@@ -68,7 +68,7 @@
 
 
     var currentPage = @Model.PageNumber;
-
+     var  pageNumber = sessionStorage.setItem("pagenumber", currentPage);
     function displayItems(itemsToDisplay)
     {
         // code to display the items for the current page

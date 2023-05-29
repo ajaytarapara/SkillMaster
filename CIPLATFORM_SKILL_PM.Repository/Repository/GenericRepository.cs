@@ -29,8 +29,9 @@ namespace CIPLATFORM_SKILL_PM.Repository.Repository
             dbset.Add(entity);
 
         }
-        public void Delete(T entity)
+        public void Delete(int id)
         {
+            T entity =dbset.Find(id);
             dbset.Remove(entity);
         }
 
@@ -60,8 +61,10 @@ namespace CIPLATFORM_SKILL_PM.Repository.Repository
             _db.SaveChanges();
         }
 
-        public IQueryable<TResult> PageList<TResult>(Expression<Func<T, bool>> predicate, Expression<Func<T, TResult>> selector, Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null)
+        public IPagedList<TResult> PageList<TResult>(Expression<Func<T, bool>> predicate, int? page, int? Size, Expression<Func<T, TResult>> selector, Func<IQueryable<T>, IOrderedQueryable<T>> orderBy)
         {
+            int pageNumber = page ?? 1;
+            int pageSize = Size??10;
             IQueryable<T> query = dbset;
 
             if (predicate != null)
@@ -75,7 +78,7 @@ namespace CIPLATFORM_SKILL_PM.Repository.Repository
             }
 
             IQueryable<TResult> result = query.Select(selector);
-            return result;
+            return result.ToPagedList(pageNumber, pageSize); ;
         }
     }
 }

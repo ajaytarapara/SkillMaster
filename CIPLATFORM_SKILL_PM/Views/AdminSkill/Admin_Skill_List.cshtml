@@ -42,12 +42,17 @@
                             style="border: none; background: white;margin-left: 10px;height: 30px;"
                             class="dropdown-toggle bg-light user-btn" type="button" id="dropdownMenu2"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            @Model.userName
+                        @Model.userName
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
                         <li class="dropdownnavbarlinks">
                             <button class="dropdown-item" type="button">
                                 <a style="text-decoration:none;color:black;" href="@Url.Action("logout", "AdminSkill")">logout </a>
+                            </button>
+                        </li>
+                        <li class="dropdownnavbarlinks">
+                            <button class="dropdown-item" type="button">
+                                <a style="text-decoration:none;color:black;" href="@Url.Action("PrivacyPolicy", "Account")">Privacy Policy</a>
                             </button>
                         </li>
                     </ul>
@@ -66,25 +71,20 @@
                         <input type="text" id="searchskill" placeholder="Search" style="width:90%;border: none;padding:5px">
                     </div>
                     <div class="col-2">
-                        <button value=""
-                                class="dropdown-toggle bg-light user-btn" type="button" id="menudropdown"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                SortBy
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                            <li class="dropdownnavbarlinks">
-                                <button class="dropdown-item" type="button" onclick="sortby(0)">
-                                    <p> &#8593;Up</p>
-                                </button>
-                            </li>
-                            <li class="dropdownnavbarlinks">
-                                <button class="dropdown-item" type="button" onclick="sortby(1)">
-                                    <p>&#8595;Down</p>
-                                </button>
-                            </li>
-                        </ul>
+                        <select id="sortby">
+                            <option selected disabled>--SELECT SORT--</option>
+                            <option value="0">ASCENDING</option>
+                            <option value="1">DESCENDING</option>
+                        </select>
                     </div>
-                    <div class="col-3"></div>
+                    <div class="col-3">
+                        <select id="pagesize">
+                            <option selected disabled>--SELECT PAGE-SIZE--</option>
+                            <option value="3">3</option>
+                            <option value="5">5</option>
+                             <option value="10">10</option>
+                        </select>
+                    </div>
                     <div class="col-3 d-flex" style="justify-content: flex-end;">
                         <button style="background: none;border: 2px solid orange;border-radius: 15px;color: orange;font-weight: bolder;width: 150px;margin-right: 0px;"
                                 class="p-2" data-bs-toggle="modal" data-bs-target="#AddskillModal">

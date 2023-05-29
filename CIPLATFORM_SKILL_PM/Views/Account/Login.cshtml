@@ -67,7 +67,7 @@
         </div>
       </div>
         <div id="logincontent" class="col-md-4 col-sm-12 logincontent">
-            <form asp-action="Login" asp-controller="Account">
+            <form asp-action="Login" asp-controller="Account" method="post">
                 <label asp-for="EmailId">Email Address</label>
                 <input asp-for="EmailId" type="text" id="loginemail" placeholder="shichan@nohara.com">
                 <span asp-validation-for="EmailId" class="text-danger"></span>

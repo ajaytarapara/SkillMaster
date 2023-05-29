@@ -12,7 +12,6 @@ using CIPLATFORM_SKILL_PM.Models.Auth;
 using CIPLATFORM_SKILL_PM.Auth;
 using AspNetCoreHero.ToastNotification.Abstractions;
 using AutoMapper;
-
 namespace CIPlatform.Controllers
 {
     public class AccountController : Controller
@@ -27,6 +26,10 @@ namespace CIPlatform.Controllers
             _loginservice = loginService;configuration = _configuration; _notyf = notyf;  _httpContextAccessor = httpContextAccessor;_mapper = mapper;
         }
         public IActionResult Login()
+        {
+            return View();
+        }
+        public IActionResult PrivacyPolicy()
         {
             return View();
         }
@@ -52,21 +55,21 @@ namespace CIPlatform.Controllers
                 var token = JwtTokenHelper.GenerateToken(jwtSetting, session);
                 if (string.IsNullOrWhiteSpace(token))
                 {
-                    ModelState.AddModelError("email", "Enter correct email");
+                    ModelState.AddModelError("email", "Pls Enter correct email");
                     return View("Login");
                 }
                 HttpContext.Session.SetString("Token", token);
                 HttpContext.Session.SetString("useremail", obj.EmailId);
-                if (isValidUser.Role.ToLower() == "volunteer")
-                {
-                    HttpContext.Session.SetString("useremail",isValidUser.Email);
-                    _notyf.Success("LoginSuccessFullyvol", 3);
-                }
                 if (isValidUser.Role.ToLower() == "admin")
                 {
                     HttpContext.Session.SetString("useremail", isValidUser.Email);
-                    _notyf.Success("LoginSuccessFullyaddmin", 3);
-                    return RedirectToAction("Admin_Skill_List", "AdminSkill", isValidUser.Email);
+                    _notyf.Success("Login Success Fully admin", 3);
+                    return RedirectToAction("Admin_Skill_List", "AdminSkill");
+                }
+                if (isValidUser.Role.ToLower() == "volunteer" || isValidUser.Role==null)
+                {
+                    HttpContext.Session.SetString("useremail", isValidUser.Email);
+                    _notyf.Success("Login Success Fully vol", 3);
                 }
             }    
             return View();

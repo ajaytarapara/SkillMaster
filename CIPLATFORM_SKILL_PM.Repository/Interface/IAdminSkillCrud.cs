@@ -9,6 +9,5 @@ namespace CIPLATFORM_SKILL_PM.Repository.Interface
 {
     public interface IAdminSkillCrud: IGenericRepository<Skill>
     {
-
     }
 }

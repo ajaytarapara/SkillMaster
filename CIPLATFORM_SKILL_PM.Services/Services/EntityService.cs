@@ -20,44 +20,27 @@ namespace CIPLATFORM_SKILL_PM.Services.Services
         {
             _repository = repository;
         }
-        public void Create(T entity)
-        {
-            if (entity == null)
-            {
-                throw new Exception("entity");
-            }
-            _repository.Add(entity);
-        }
         public T GetFirstordefault(Expression<Func<T, bool>> filter)
         {
             return _repository.GetFirstordefault(filter);
         }
-
-        public void Update(T entity)
+        public void Delete(int id)
         {
-            if (entity == null) throw new ArgumentNullException("entity");
-            _repository.Edit(entity);
+            _repository.Delete(id);
         }
 
-        public void Delete(T entity)
+        public IEnumerable<T> GetAll(Expression<Func<T, bool>> filter, string searchText)
         {
-            if (entity == null) throw new ArgumentNullException("entity");
-            _repository.Delete(entity);
-        }
-
-        public IEnumerable<T> GetAll(Expression<Func<T, bool>> filter,string searchText)
-        {
-                return _repository.GetAll(filter, searchText);
+            return _repository.GetAll(filter, searchText);
         }
         public void Save()
         {
             _repository.Save();
         }
-        public IPagedList<TResult> PageList<TResult>(int? page, Expression<Func<T, bool>> predicate, Expression<Func<T, TResult>> selector, Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null)
+        public IPagedList<TResult> PageList<TResult>(int? page, int? size, Expression<Func<T, bool>> predicate, Expression<Func<T, TResult>> selector, Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null)
         {
-            int pageNumber = page??1;
-            int pageSize = 10;
-            return _repository.PageList(predicate, selector, orderBy).ToPagedList(pageNumber, pageSize);
+            return _repository.PageList(predicate, page, size, selector, orderBy);
         }
+
     }
 }

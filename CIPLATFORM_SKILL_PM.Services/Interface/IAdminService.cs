@@ -10,5 +10,6 @@ namespace CIPLATFORM_SKILL_PM.Services.Interface
 {
     public interface IAdminService : IEntityService<Skill>
     {
+       int AddEdit(int id, string skillName, bool status);
     }
 }

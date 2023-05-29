@@ -1,18 +1,41 @@
 ﻿$(document).ready(function () {
+    $("#searchskill").val(sessionStorage.getItem("searchtext"));
+    $("#sortby").on("change", function () {
+        var orderBy = $("#sortby").val();
+        sessionStorage.setItem("sortby", orderBy);
+        getSkillData()
+    });
+    $("#pagesize").on("change", function () {
+        var pagesize = $("#pagesize").val();
+        sessionStorage.setItem("pagesize", pagesize);
+        getSkillData();
+    });
     getSkillData();
     searchskill();
 });
 
-function getSkillData(pageNumber,orderBy) {
+function getSkillData(pageNumber, orderBy, size) {
+    if (pageNumber == null || pageNumber == "") {
+        pageNumber = sessionStorage.getItem("pagenumber");
+    }
+    if (searchusertext == null || searchusertext == "") {
+        searchusertext = sessionStorage.getItem("searchtext");
+    }
+    if (orderBy == null || orderBy == "") {
+        orderBy = sessionStorage.getItem("sortby");
+    }
+    if (size == null || size == "") {
+        pagesize = sessionStorage.getItem("pagesize");
+    }
     $.ajax({
         type: "post",
         url: '/AdminSkill/GetSkillData',
-        data: { page: pageNumber, searchText: searchusertext, orderBy:orderBy },
+        data: { page: pageNumber, searchText: searchusertext, orderBy: orderBy, size: pagesize },
+        cache: true,
         dataType: "html",
         success: function (data) {
             $("#skillTable").html("");
             $("#skillTable").html(data);
-            console.log(data);
         },
         error: function (xhr, status, error) {
             // Handle error
@@ -21,10 +44,18 @@ function getSkillData(pageNumber,orderBy) {
     });
 }
 
-function sortby(orderBy) {
-    getSkillData(1,orderBy);
-}
+//function sortby(orderBy) {
+//    var pagersize = sessionStorage.getItem("pagesize");
+//    pageSize(pagersize);
+//    sessionStorage.setItem("sortby", orderBy);
+//   var pageNumber = sessionStorage.getItem("pagenumber");
+//    getSkillData(pageNumber,orderBy);
+//}
 
+//function pageSize(size) {
+//    sessionStorage.setItem("pagesize", size);
+//    getSkillData(1,0,size);
+//}
 
 var skillId = "";
 function editskill(SkillId, PageNumber) {
@@ -53,11 +84,9 @@ function editskillpost(skillId, PageNumber) {
     skillstatus = $("#editstatus").val();
     $.ajax({
         type: "post",
-        url: '/AdminSkill/EditSkill',
+        url: '/AdminSkill/AddEditSkill',
         data: { id: skillId, status: skillstatus, skillName: skillnameedit },
         success: function (data) {
-            if (data["data"] == 1)
-                $('#EditskillModal').modal('toggle');
             getSkillData(PageNumber);
         },
         error: function (xhr) {
@@ -87,15 +116,14 @@ function deleteSkill(skillid, pageNo) {
 var searchusertext = "";
 function searchskill() {
     $("#searchskill").on("keyup", function () {
-        console.log("click");
         searchusertext = $("#searchskill").val();
-        console.log("VALUE:" + searchusertext);
+        sessionStorage.setItem("searchtext", searchusertext);
         if (searchusertext.length > 1) {
-            getSkillData(1);
+            getSkillData();
         }
         else {
             searchusertext = "";
-            getSkillData(1);
+            getSkillData();
         }
     });
 }
@@ -103,21 +131,15 @@ var skillname = "";
 var status = "";
 function addSkill() {
     skillname = $("#skillname").val();
-    console.log(skillname);
     status = $("#status").val();
-    console.log(status);
     $.ajax({
         type: "Post",
-        url: '/AdminSkill/AdminSkillAdd',
+        url: '/AdminSkill/AddEditSkill',
         data: { skillname: skillname, status: status },
         success: function (data) {
             if (data["data"] == 1) {
                 $('#EditskillModal').toggle();
-                getSkillData(1);
-                location.reload();
-            }
-            else {
-                toastr.error("Skill already exists");
+                getSkillData();
             }
         },
         error: function (xhr) {
@@ -126,3 +148,4 @@ function addSkill() {
 
     });
 }
+

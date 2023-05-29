@@ -17,7 +17,6 @@ namespace CIPLATFORM_SKILL_PM.Repository.Repository
         {
             _entities = context;
         }
-
-
+        
     }
 }
