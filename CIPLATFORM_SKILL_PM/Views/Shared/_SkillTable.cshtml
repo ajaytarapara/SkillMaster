@@ -16,9 +16,14 @@
         <tbody>
             @foreach (var item in Model)
             {
+
                 <tr>
 
-                    <td>@item.SkillName</td>
+                    <td style="">@item.SkillName  &nbsp;@*@if (Int32.Parse((DateTime.Now-@item.createdAt).ToString())==1)*@
+@*                        {
+                          <h6><span class="btn btn-secondary">New</span></h6>
+                        }*@
+                    </td>
                     @if (item.Status == true)
                     {
                         <td style="color: green;">active</td>
@@ -47,13 +52,12 @@
                              src="~/images/bin.png">
                         </button>
                     </td>
-
                 </tr>
             }
         </tbody>
     </table>
-</div>
 
+</div>
 <div id="pagination" class="my-3">
     <ul id="pagination-list" class="mb-3"></ul>
 </div>

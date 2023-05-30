@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LxIerpGlq+UAS3woh3AG9kHPmUU308wi6od1/NBgvdw=",
+  "Hash": "QM71h7bNOC6ozE86kbuDMzOSf0BUHVr88m1ucV6O1X4=",
   "Source": "CIPLATFORM_SKILL_PM",
   "BasePath": "_content/CIPLATFORM_SKILL_PM",
   "Mode": "Default",
@@ -153,6 +153,40 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "D:\\SkillMaster\\CIPLATFORM_SKILL_PM\\CIPLATFORM_SKILL_PM\\wwwroot\\images\\1amw.gif",
+      "SourceId": "CIPLATFORM_SKILL_PM",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\SkillMaster\\CIPLATFORM_SKILL_PM\\CIPLATFORM_SKILL_PM\\wwwroot\\",
+      "BasePath": "_content/CIPLATFORM_SKILL_PM",
+      "RelativePath": "images/1amw.gif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\1amw.gif"
+    },
+    {
+      "Identity": "D:\\SkillMaster\\CIPLATFORM_SKILL_PM\\CIPLATFORM_SKILL_PM\\wwwroot\\images\\8CLc.gif",
+      "SourceId": "CIPLATFORM_SKILL_PM",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\SkillMaster\\CIPLATFORM_SKILL_PM\\CIPLATFORM_SKILL_PM\\wwwroot\\",
+      "BasePath": "_content/CIPLATFORM_SKILL_PM",
+      "RelativePath": "images/8CLc.gif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\8CLc.gif"
+    },
+    {
       "Identity": "D:\\SkillMaster\\CIPLATFORM_SKILL_PM\\CIPLATFORM_SKILL_PM\\wwwroot\\images\\bin.png",
       "SourceId": "CIPLATFORM_SKILL_PM",
       "SourceType": "Discovered",
@@ -236,6 +270,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\volunteer1.png"
+    },
+    {
+      "Identity": "D:\\SkillMaster\\CIPLATFORM_SKILL_PM\\CIPLATFORM_SKILL_PM\\wwwroot\\images\\XOsX.gif",
+      "SourceId": "CIPLATFORM_SKILL_PM",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\SkillMaster\\CIPLATFORM_SKILL_PM\\CIPLATFORM_SKILL_PM\\wwwroot\\",
+      "BasePath": "_content/CIPLATFORM_SKILL_PM",
+      "RelativePath": "images/XOsX.gif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\XOsX.gif"
     },
     {
       "Identity": "D:\\SkillMaster\\CIPLATFORM_SKILL_PM\\CIPLATFORM_SKILL_PM\\wwwroot\\js\\AdminSkill.js",

@@ -13,8 +13,8 @@
     getSkillData();
     searchskill();
 });
-
 function getSkillData(pageNumber, orderBy, size) {
+    $(".loader-div").show();
     if (pageNumber == null || pageNumber == "") {
         pageNumber = sessionStorage.getItem("pagenumber");
     }
@@ -34,8 +34,11 @@ function getSkillData(pageNumber, orderBy, size) {
         cache: true,
         dataType: "html",
         success: function (data) {
+            setTimeout(() => {
             $("#skillTable").html("");
             $("#skillTable").html(data);
+                $(".loader-div").hide();
+            }, 500);
         },
         error: function (xhr, status, error) {
             // Handle error
@@ -43,22 +46,9 @@ function getSkillData(pageNumber, orderBy, size) {
         }
     });
 }
-
-//function sortby(orderBy) {
-//    var pagersize = sessionStorage.getItem("pagesize");
-//    pageSize(pagersize);
-//    sessionStorage.setItem("sortby", orderBy);
-//   var pageNumber = sessionStorage.getItem("pagenumber");
-//    getSkillData(pageNumber,orderBy);
-//}
-
-//function pageSize(size) {
-//    sessionStorage.setItem("pagesize", size);
-//    getSkillData(1,0,size);
-//}
-
 var skillId = "";
 function editskill(SkillId, PageNumber) {
+    $(".loader-div").show();
     $.ajax({
         type: "get",
         url: '/AdminSkill/getSkillforedit',
@@ -68,6 +58,7 @@ function editskill(SkillId, PageNumber) {
             $("#editstatus").val("" + data.status);
             $("#EditSkillId").val("" + data.skillId);
             $("#editskill").attr("onclick", "editskillpost(" + SkillId + ", " + PageNumber + " )");
+            $(".loader-div").hide();
         },
         error: function (xhr) {
             // Handle error
@@ -76,10 +67,10 @@ function editskill(SkillId, PageNumber) {
 
     });
 }
-
 var skillnameedit = "";
 var skillstatus = "";
 function editskillpost(skillId, PageNumber) {
+    $(".loader-div").show();
     skillnameedit = $("#editskillname").val();
     skillstatus = $("#editstatus").val();
     $.ajax({
@@ -87,7 +78,9 @@ function editskillpost(skillId, PageNumber) {
         url: '/AdminSkill/AddEditSkill',
         data: { id: skillId, status: skillstatus, skillName: skillnameedit },
         success: function (data) {
+
             getSkillData(PageNumber);
+            $(".loader-div").hide();
         },
         error: function (xhr) {
             alert(xhr.responseText);
@@ -95,18 +88,19 @@ function editskillpost(skillId, PageNumber) {
 
     });
 }
-
 function confirmationForDelete(deleteId, PageNumber) {
     $("#delete-skill-id").attr("onclick", "deleteSkill(" + deleteId + ",' + @Model.PageNumber + ')");
 }
 function deleteSkill(skillid, pageNo) {
+    $(".loader-div").show();
     $.ajax({
         type: 'POST',
         url: '/AdminSkill/DeleteSkill',
         data: { id: skillid },
         success: function (result) {
+            $(".loader-div").hide();
             toastr.error("Skill deleted successfully");
-            getSkillData(pageNo);
+            getSkillData();
         },
         error: function () {
             alert("error");
@@ -130,6 +124,7 @@ function searchskill() {
 var skillname = "";
 var status = "";
 function addSkill() {
+    $(".loader-div").show();
     skillname = $("#skillname").val();
     status = $("#status").val();
     $.ajax({
@@ -141,6 +136,7 @@ function addSkill() {
                 $('#EditskillModal').toggle();
                 getSkillData();
             }
+            $(".loader-div").hide();
         },
         error: function (xhr) {
             alert(xhr.responseText);

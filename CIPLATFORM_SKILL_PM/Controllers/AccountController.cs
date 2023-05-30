@@ -12,8 +12,11 @@ using CIPLATFORM_SKILL_PM.Models.Auth;
 using CIPLATFORM_SKILL_PM.Auth;
 using AspNetCoreHero.ToastNotification.Abstractions;
 using AutoMapper;
+
+
 namespace CIPlatform.Controllers
 {
+
     public class AccountController : Controller
     {
         private readonly ILoginService _loginservice;
@@ -25,9 +28,10 @@ namespace CIPlatform.Controllers
         {
             _loginservice = loginService;configuration = _configuration; _notyf = notyf;  _httpContextAccessor = httpContextAccessor;_mapper = mapper;
         }
+
         public IActionResult Login()
         {
-            return View();
+          return View();
         }
         public IActionResult PrivacyPolicy()
         {

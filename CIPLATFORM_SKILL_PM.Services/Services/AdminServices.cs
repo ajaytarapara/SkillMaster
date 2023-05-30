@@ -21,7 +21,7 @@ namespace CIPLATFORM_SKILL_PM.Services.Services
          int IAdminService.AddEdit(int id, string skillName, bool status)
         {
             var obj = _repository.GetFirstordefault(t => t.SkillName == skillName);
-            if (obj!=null)
+            if (obj!=null && obj.Status==status)
             {
                 return 1;
             }

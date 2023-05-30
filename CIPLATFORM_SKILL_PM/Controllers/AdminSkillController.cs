@@ -63,7 +63,8 @@ namespace CIPLATFORM_SKILL_PM.Controllers
             int pageNumber = page ?? 1; int pageSize = size ?? 10;
             IPagedList<SkillModel?>? skillViewModels = _adminService.PageList(page,size, x => searchText != null ? (x.SkillName.ToLower().Contains(searchText.ToLower()) && 
             x.DeletedAt == null) : (x.DeletedAt == null),
-            x => new SkillModel { skillid = x.SkillId, SkillName = x.SkillName, Status = x.Status }, q => orderBy == 0 ? q.OrderBy(x => x.SkillName) : q.OrderByDescending
+            x => new SkillModel { skillid = x.SkillId, SkillName = x.SkillName, Status = x.Status, createdAt = x.CreatedAt }, q => orderBy == 0 ? q.OrderBy(x => x.SkillName) : q.OrderByDescending
+
             (x => x.SkillName));
             return PartialView("_SkillTable", skillViewModels);
         }

@@ -1,8 +1,3 @@
-D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Services\obj\Debug\net6.0\CIPLATFORM_SKILL_PM.Services.csproj.AssemblyReference.cache
-D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Services\obj\Debug\net6.0\CIPLATFORM_SKILL_PM.Services.GeneratedMSBuildEditorConfig.editorconfig
-D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Services\obj\Debug\net6.0\CIPLATFORM_SKILL_PM.Services.AssemblyInfoInputs.cache
-D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Services\obj\Debug\net6.0\CIPLATFORM_SKILL_PM.Services.AssemblyInfo.cs
-D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Services\obj\Debug\net6.0\CIPLATFORM_SKILL_PM.Services.csproj.CoreCompileInputs.cache
 D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Services\bin\Debug\net6.0\CIPLATFORM_SKILL_PM.Services.deps.json
 D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Services\bin\Debug\net6.0\CIPLATFORM_SKILL_PM.Services.runtimeconfig.json
 D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Services\bin\Debug\net6.0\CIPLATFORM_SKILL_PM.Services.dll
@@ -12,6 +7,11 @@ D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Services\bin\Debug\net6.0
 D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Services\bin\Debug\net6.0\CIPLATFORM_SKILL_PM.Repository.dll
 D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Services\bin\Debug\net6.0\CIPLATFORM_SKILL_PM.Models.pdb
 D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Services\bin\Debug\net6.0\CIPLATFORM_SKILL_PM.Repository.pdb
+D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Services\obj\Debug\net6.0\CIPLATFORM_SKILL_PM.Services.csproj.AssemblyReference.cache
+D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Services\obj\Debug\net6.0\CIPLATFORM_SKILL_PM.Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Services\obj\Debug\net6.0\CIPLATFORM_SKILL_PM.Services.AssemblyInfoInputs.cache
+D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Services\obj\Debug\net6.0\CIPLATFORM_SKILL_PM.Services.AssemblyInfo.cs
+D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Services\obj\Debug\net6.0\CIPLATFORM_SKILL_PM.Services.csproj.CoreCompileInputs.cache
 D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Services\obj\Debug\net6.0\CIPLATFORM_SKILL_PM.Services.csproj.CopyComplete
 D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Services\obj\Debug\net6.0\CIPLATFORM_SKILL_PM.Services.dll
 D:\SkillMaster\CIPLATFORM_SKILL_PM\CIPLATFORM_SKILL_PM.Services\obj\Debug\net6.0\ref\CIPLATFORM_SKILL_PM.Services.dll

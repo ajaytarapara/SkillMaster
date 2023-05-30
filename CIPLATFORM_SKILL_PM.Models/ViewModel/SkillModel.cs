@@ -17,5 +17,6 @@ namespace CIPLATFORM_SKILL_PM.Models.ViewModel
         public int? skillid { get; set; }
         public int TotalCount { get; set; }
         public string? userName { get; set; }
+        public DateTime? createdAt { get; set; }
     }
 }

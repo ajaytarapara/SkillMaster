@@ -8,23 +8,23 @@
                 <h5 class="modal-title" id="staticBackdropLabel">Add Skill</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-                @Html.AntiForgeryToken()
-                <div class="modal-body">
-                    <label>Skill</label><br>
-                    <input id="skillname"  asp-for="SkillName" style="width:100%" class="form-control mt-1" type="text" />
-                    <span asp-validation-for="SkillName" class="text-danger" id="validateskill"></span>
-                    <div class="py-2">
-                        <label asp-for="Status" class="form-label">Status</label>
-                        <select id="status" asp-for="Status" id="" class="form-select">
-                            <option value="true">Active</option>
-                            <option value="false">Deactivate</option>
-                        </select>
-                    </div>
+            @Html.AntiForgeryToken()
+            <div class="modal-body">
+                <label>Skill</label><br>
+                <input id="skillname" asp-for="SkillName" style="width:100%" class="form-control mt-1" type="text" />
+                <span asp-validation-for="SkillName" class="text-danger" id="validateskill"></span>
+                <div class="py-2">
+                    <label asp-for="Status" class="form-label">Status</label>
+                    <select id="status" asp-for="Status" id="" class="form-select">
+                        <option value="true">Active</option>
+                        <option value="false">Deactivate</option>
+                    </select>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <input type="button" onclick="addSkill()" class="btn btn-danger" data-bs-dismiss="modal" value="Add" id="addskill" />
-                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <input type="button" onclick="addSkill()" class="btn btn-danger" data-bs-dismiss="modal" value="Add" id="addskill" />
+            </div>
         </div>
     </div>
 </div>
@@ -38,23 +38,23 @@
                 <h5 class="modal-title" id="staticBackdropLabel">Add Skill</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-                @Html.AntiForgeryToken()
-                <div class="modal-body">
-                    <label>Skill</label><br>
-                    <input id="skillname" asp-required   asp-for="SkillName" style="width:100%" class="form-control mt-1" type="text" />
-                    <span asp-validation-for="SkillName" class="text-danger" id="validateskill"></span>
-                    <div class="py-2">
-                        <label asp-for="Status" class="form-label">Status</label>
-                        <select id="status" asp-for="Status" id="" class="form-select">
-                            <option value="true">Active</option>
-                            <option value="false">Deactivate</option>
-                        </select>
-                    </div>
+            @Html.AntiForgeryToken()
+            <div class="modal-body">
+                <label>Skill</label><br>
+                <input id="skillname" asp-required asp-for="SkillName" style="width:100%" class="form-control mt-1" type="text" />
+                <span asp-validation-for="SkillName" class="text-danger" id="validateskill"></span>
+                <div class="py-2">
+                    <label asp-for="Status" class="form-label">Status</label>
+                    <select id="status" asp-for="Status" id="" class="form-select">
+                        <option value="true">Active</option>
+                        <option value="false">Deactivate</option>
+                    </select>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <input type="button" onclick="addSkill()" class="btn btn-danger" data-bs-dismiss="modal" value="Add" id="addskill" />
-                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <input type="button" onclick="addSkill()" class="btn btn-danger" data-bs-dismiss="modal" value="Add" id="addskill" />
+            </div>
         </div>
     </div>
 </div>
@@ -86,7 +86,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-danger"  id="editskill">Edit</button>
+                    <button type="button" class="btn btn-danger" id="editskill">Edit</button>
                 </div>
             </form>
         </div>
@@ -97,8 +97,8 @@
 @*==============================================================modals for delete skill================================================================================*@
 
 <!-- Modal -->
-<div class="modal fade" id="confirm-delete-skill-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"style="top:25%;left:7%">
-    <div class="modal-dialog" >
+<div class="modal fade" id="confirm-delete-skill-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="top:25%;left:7%">
+    <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Delete Skill</h5>
@@ -109,7 +109,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                <button type="button" onclick="deleteSkill()" id="delete-skill-id" class="btn btn-danger"  data-bs-dismiss="modal">Delete</button>
+                <button type="button" onclick="deleteSkill()" id="delete-skill-id" class="btn btn-danger" data-bs-dismiss="modal">Delete</button>
             </div>
         </div>
     </div>

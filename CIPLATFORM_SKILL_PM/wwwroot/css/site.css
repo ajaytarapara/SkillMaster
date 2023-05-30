@@ -288,3 +288,27 @@ body {
     align-items: center;
     border-radius: 10px;
 }
+.loader-div{
+    position:fixed;
+    margin:0px;
+    padding:0px;
+    right:0px;
+    top:0px;
+    width:100%;
+    height:100%;
+    opacity:.9;
+    display:flex;
+    justify-content:center;
+    align-items:center
+}
+.loader-img {
+    position: absolute;
+    margin: auto;
+    padding: 0px;
+    right: 0%;
+    top: 0px;
+    bottom: 0px;
+    height: 99%;
+    width: 80%;
+    z-index:100000
+}
